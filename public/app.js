@@ -10,7 +10,29 @@ var CardCharacteristics = {
     Spades: ''
 };
 
-DrawCard = () => {
+var CardsPlayed = [];
+
+StartGame = () => {
+    CardsPlayed = [];
     var DrawRandomCard = (max) => Math.floor(Math.random(Cards) * max);
-    console.log(DrawRandomCard(4) + ', ' + DrawRandomCard(14));
+    for (i = 0; i < 2; i++) {
+        var CardDrawn = (DrawRandomCard(4) + ', ' + DrawRandomCard(13));
+        CardsPlayed.push(CardDrawn);
+    };
+
+    console.log(CardsPlayed)
 };
+
+
+Hit = () => {
+    var DrawRandomCard = (max) => Math.floor(Math.random(Cards) * max);
+    var CardDrawn = (DrawRandomCard(4) + ', ' + DrawRandomCard(13));
+
+    CardsPlayed.push(CardDrawn);
+    console.log(CardsPlayed);
+
+};
+
+Add = () => {
+    
+}
