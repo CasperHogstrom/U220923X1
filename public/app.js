@@ -14,7 +14,13 @@ var CardsPlayed = [];
 
 DrawCardFn = () => {
     var DrawRandomCard = (max) => Math.floor(Math.random(Cards) * max);
-    var CardDrawn = (DrawRandomCard(4) + ', ' + DrawRandomCard(13));
+    /*
+    En loop som först kollar efter om kortet som "dragits" är false och i fall att det är det "dela" ut det,
+    och sedan sätt det kortet till true. Om kortet däremot är true ska det genereras ett nytt kort som "delas" ut.
+    Detta ska köras för varje kort så att inte två av samma kort delas ut vid start av nytt spel.
+    Loopen bör då köras för varje DrawRandomCard funktion.
+    */
+    var CardDrawn = (`${DrawRandomCard(4)}, ${DrawRandomCard(13)}`);
     CardsPlayed.push(CardDrawn);
 }
 
