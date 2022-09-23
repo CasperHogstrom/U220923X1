@@ -1,17 +1,16 @@
-console.log('Hej!');
+var x;
+var y;
 
-var Cards = [
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 99, 12, 13],
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-];
+Cards = [x,y];
 
 var CardCharacteristics = {
-    Hjärter: '',
-    Ruter: '',
-    Klöver: '',
-    Spader: ''
+    Hearts: '',
+    Diamonds: '',
+    Clubs: '',
+    Spades: ''
 };
 
-console.log(Cards[3][10])
+DrawCard = () => {
+    var DrawRandomCard = (max) => Math.floor(Math.random(Cards) * max);
+    console.log(DrawRandomCard(4) + ', ' + DrawRandomCard(14));
+};
