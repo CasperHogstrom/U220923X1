@@ -15,8 +15,8 @@ var CardsPlayed = [];
 DrawCardFn = () => {
     var DrawRandomCard = (max) => Math.floor(Math.random(Cards) * max);
     /*
-    En loop som först kollar efter om kortet som "dragits" är false och i fall att det är det "dela" ut det,
-    och sedan sätt det kortet till true. Om kortet däremot är true ska det genereras ett nytt kort som "delas" ut.
+    En loop som först kollar efter om kortet som "dragits" är false(kanske måste leta efter true för att "korten" ej har värdet false som standard) 
+    och i fall att det är det "dela" ut det, och sedan sätt det kortet till true. Om kortet däremot är true ska det genereras ett nytt kort som "delas" ut.
     Detta ska köras för varje kort så att inte två av samma kort delas ut vid start av nytt spel.
     Loopen bör då köras för varje DrawRandomCard funktion.
     */
