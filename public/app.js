@@ -20,9 +20,21 @@ DrawCardFn = () => {
     Detta ska köras för varje kort så att inte två av samma kort delas ut vid start av nytt spel.
     Loopen bör då köras för varje DrawRandomCard funktion.
     */
+    
+    //var falseCond = new Boolean(false);
     var CardDrawn = (`${DrawRandomCard(4)}, ${DrawRandomCard(13)}`);
-    CardsPlayed.push(CardDrawn);
-}
+    CheckCard(CardDrawn);
+    console.table(CardsPlayed);
+};
+
+CheckCard = (CardDrawn ) => {
+    if (CardsPlayed.includes(CardDrawn)) {
+        DrawCardFn();
+    } else {
+        CardsPlayed.push(CardDrawn);
+    };
+
+};
 
 StartGame = () => {
     CardsPlayed = [];
